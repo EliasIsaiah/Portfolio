@@ -1,0 +1,52 @@
+div.container {
+    width: 100%;
+    margin: auto;
+}
+
+div.gridContainer {
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+div.helloDiv {
+    margin: 10%;
+}
+footer.pageFooter {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: .2rem 0;
+    font-style: italic;
+    text-align: center;
+    background: #4e2e28;
+}
+
+footer p {
+    color: #dfdfdf;
+    font-size: .6rem;
+}
+
+@media screen and (min-width: 1900px) {
+    div.container {
+        width: 60%;
+    }   
+}
+
+@media screen and (min-width: 1024px) {
+    div.container {
+        grid-template-rows: [row-start row-1-start] minmax(auto, .1fr) [row-2-start] auto [row-3-start] minmax(auto, .5fr) [row-4-start] minmax(auto, 1fr) [row-end row-4-end];
+    }
+
+    div.targetNumber p, div.scoreboard p, div.recordDiv p {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
+}
+@media screen and (min-width: 1366px) {
+    div.instructions {
+        grid-column: col-2-start / col-4-start;
+        overflow-y: hidden;
+    }
+}
