@@ -64,25 +64,4 @@ $(document).ready(function () {
     })
 
     helloHeader.buildHelloHeaderDOM();  
-
-    // $("div.helloDiv").on("mouseenter", function() {
-    //     $this = $(this);
-    //     $this.text($this.attr("data-word"));
-    //     console.log($this);
-    // });
-
-    // $("div.helloDiv").on("mouseleave", function() {
-    //     $this = $(this);
-    //     $this.text($this.attr("data-hello"));
-    //     console.log($this);
-    // });
-
-    // fetch("https://api.github.com/users/eliasisaiah/repos?callback=foo")
-    //     .then(response => {
-    //         console.log(response);
-    //         // response.forEach(repo => {
-    //         //     let repoObj = new repoObject(repo);
-    //         //     console.log(repoObj);
-    //         // })
-    //     })
 })
