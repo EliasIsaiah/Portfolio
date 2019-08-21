@@ -13,8 +13,8 @@ $(document).ready(function () {
 
         buildRepoDOM() {
             let newRepoDiv = $("<div>").addClass("repoDiv");
-            let name = $("<p>").text(this.name);
-            let description = $("<p>").text(this.description);
+            let name = $("<p>").text(this.name).addClass("repoName");
+            let description = $("<p>").text(this.description).addClass("repoDescription");
             let urlP = $("<p>").text(this.url);
             let url = $("<a>").attr("href", this.url).append(urlP);
             $("div.repoContainer").append(newRepoDiv.append(name, description, url));

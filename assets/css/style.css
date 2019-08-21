@@ -1,9 +1,24 @@
 body {
-    background-color: rgb(221,210,189);
+    background-color: rgb(221, 210, 189);
     background: url("../images/background2.png") repeat;
     background-size: 5px 5px;
     font-family: Helvetica, sans-serif;
 }
+
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+
+li {
+    display: list-item;
+}
+
 div.container {
     display: grid;
     width: 100%;
@@ -16,7 +31,7 @@ div.helloHeader {
     grid-template-columns: repeat(1, 1fr);
 }
 
-div.helloDiv{
+div.helloDiv {
     /* margin: 10%; */
     padding: 15%;
     display: none;
@@ -24,16 +39,21 @@ div.helloDiv{
     align-self: center;
     font-size: 1.5rem;
 }
+
 div.repoContainer {
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(1, 1fr);
 }
 
+p.repoName {
+    font-weight: 600;
+    margin: .4rem 0;
+}
+
 div.repoDiv {
     margin: 5%;
 }
-
 
 footer.pageFooter {
     position: fixed;
@@ -70,7 +90,7 @@ footer p {
 }
 
 @media screen and (min-width: 1366px) {
-    
+
     div.helloHeader {
         grid-template-columns: repeat(4, 1fr);
     }
