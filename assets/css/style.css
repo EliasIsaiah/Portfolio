@@ -1,3 +1,5 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css");
+
 body {
     background-color: rgb(221, 210, 189);
     background: url("../images/background2.png") repeat;
@@ -38,6 +40,16 @@ div.helloDiv {
     justify-self: center;
     align-self: center;
     font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+div.repoHeader {
+    justify-self: center;
+    align-self: center;
+    margin: 10px 0;
 }
 
 div.repoContainer {
