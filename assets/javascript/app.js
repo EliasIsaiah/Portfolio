@@ -2,8 +2,7 @@ $(document).ready(function () {
 
     //global vars
 
-    let mouseCounter = 0;
-    let arrayCounter = 0;
+
 
     class repoObject {
         constructor(object) {
@@ -27,24 +26,36 @@ $(document).ready(function () {
     }
 
     const utilities = {
+        wordInterval: null,
+        mouseCounter : 0,
+        arrayCounter : 0,
+
         getRandom: function (min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
-        }
+        },
+
+        changeText: function(object) {
+            $this.children().text($this.attr("data-hello"));
+        },
+        checkArrayData: function() {
+            // clearInterval(this.wordInterval);
+            
+            if(this.mouseCounter >= helloHeader.words[this.arrayCounter].length){
+                this.mouseCounter = 0;
+                this.arrayCounter++
+                if(this.arrayCounter >= helloHeader.words.length){
+                    this.arrayCounter = 0;
+                }
+                // wordInterval = setInterval(, 10000);
+                // this.wordInterval = setInterval(helloHeader.buildHelloHeaderDOM(), 2000);
+                helloHeader.buildHelloHeaderDOM();
+            } 
+        },
     }
 
-    function checkArrayData() {
-        
-        if(mouseCounter >= helloHeader.words[arrayCounter].length){
-            mouseCounter = 0;
-            arrayCounter++
-            if(arrayCounter >= helloHeader.words.length){
-                arrayCounter = 0;
-            }
-            helloHeader.buildHelloHeaderDOM();
-        } 
-    }
 
     helloHeader = {
+
         words: [
             ["My", "name", "is", "Elias"],
             ["The", "cake", "is", "a lie"],
@@ -62,7 +73,7 @@ $(document).ready(function () {
 
             $("div.helloHeader").empty();
 
-            this.words[arrayCounter].forEach(word => {
+            this.words[utilities.arrayCounter].forEach(word => {
                 let helloDiv = $("<div>")
                     .attr("data-word", word)
                     .addClass("helloDiv animated pulse")
@@ -76,17 +87,16 @@ $(document).ready(function () {
                 let helloP = $("<p>").text("Hello");
 
                 helloDiv.on("mouseenter", function () {
-                    $this = $(this);
+                    $this = $(this);                                 
                     $this.children().text($this.attr("data-word"));
                 });
 
                 helloDiv.on("mouseleave", function () {
                     $this = $(this);
-                    $this.children().text($this.attr("data-hello"));
-                    mouseCounter++;
-                    console.log("counter: " + mouseCounter);
+                    utilities.mouseCounter++;
+                    console.log("counter: " + utilities.mouseCounter);
                     $this.off();
-                    checkArrayData();
+                    utilities.checkArrayData();
                 });
 
                 helloDiv.append(helloP);
