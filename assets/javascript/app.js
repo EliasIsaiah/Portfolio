@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     //global vars
 
-
+    let interval = null;
 
     class repoObject {
         constructor(object) {
@@ -25,31 +25,51 @@ $(document).ready(function () {
         }
     }
 
+    // let interval = {
+    //     intervals: [],
+
+    //     makeNewInterval: function(func, seconds, name){
+    //         let name = setInterval(func, seconds * 1000);
+    //         this.intervals.push(name);
+    //         return newInterval; 
+    //     },
+
+    //     clear(i) {
+    //         this.intervals.splice(i, 1);
+    //     }
+    // }
+
     const utilities = {
         wordInterval: null,
-        mouseCounter : 0,
-        arrayCounter : 0,
+        mouseCounter: 0,
+        arrayCounter: 0,
 
         getRandom: function (min, max) {
             return Math.floor(Math.random() * (max - min)) + min;
         },
 
-        changeText: function(object) {
+        changeText: function (object) {
             $this.children().text($this.attr("data-hello"));
         },
-        checkArrayData: function() {
+        checkArrayData: function () {
             // clearInterval(this.wordInterval);
-            
-            if(this.mouseCounter >= helloHeader.words[this.arrayCounter].length){
+
+            if (this.mouseCounter >= helloHeader.words[this.arrayCounter].length) {
                 this.mouseCounter = 0;
                 this.arrayCounter++
-                if(this.arrayCounter >= helloHeader.words.length){
+                if (this.arrayCounter >= helloHeader.words.length) {
                     this.arrayCounter = 0;
                 }
                 // wordInterval = setInterval(, 10000);
                 // this.wordInterval = setInterval(helloHeader.buildHelloHeaderDOM(), 2000);
-                helloHeader.buildHelloHeaderDOM();
-            } 
+                clearInterval();
+
+                // helloHeader.buildHelloHeaderDOM();
+                interval = setInterval(() => {
+                    helloHeader.buildHelloHeaderDOM();
+                }, 2000);
+
+            }
         },
     }
 
@@ -62,10 +82,10 @@ $(document).ready(function () {
             ["I", "am", "the", "senate"],
             ["yippee", "ki", "yay", "cinnamon toast crunch"],
             ["Lions", "tigers", "bears", "oh my"],
-            ["Are", "you", "still", "reading this?"],
-            ["I'm", "running", "out", "of ideas"],
+            // ["Are", "you", "still", "reading this?"],
+            // ["I'm", "running", "out", "of ideas"],
             ["Now is the time", "for all good men", "to come to the aid", "of the party"],
-            ["In the mornings", "when I'm usually wide awake", "I love to take a walk through the gardens and down by the lake", "where I often see a duck and a drake", "and I wonder, as I walk by, just what they'd say", "if they could speak", "although I know that's an absurd thought." ]
+            // ["In the mornings", "when I'm usually wide awake", "I love to take a walk through the gardens and down by the lake", "where I often see a duck and a drake", "and I wonder, as I walk by, just what they'd say", "if they could speak", "although I know that's an absurd thought." ]
         ],
 
         buildHelloHeaderDOM: function () {
@@ -75,18 +95,19 @@ $(document).ready(function () {
             this.words[utilities.arrayCounter].forEach(word => {
                 let helloDiv = $("<div>")
                     .attr("data-word", word)
-                    .addClass("helloDiv animated pulse")
-                    .css({
-                        'animation-duration': `${utilities.getRandom(2, 5)}s`,
-                        'animation-delay': '3s',
-                        'animation-iteration-count': 'infinite'
-                    })
+                    .addClass("helloDiv")
+
+                pulseInterval = setInterval(() => {
+                    helloDiv.addClass("animated pulse");
+                }, 2000);
+
+                clearInterval(interval);
 
                 helloDiv.attr("data-hello", "Hello");
                 let helloP = $("<p>").text("Hello");
 
                 helloDiv.on("mouseenter", function () {
-                    $this = $(this);                                 
+                    $this = $(this);
                     $this.children().text($this.attr("data-word"));
                 });
 
@@ -100,7 +121,10 @@ $(document).ready(function () {
 
                 helloDiv.append(helloP);
                 $("div.helloHeader").append(helloDiv);
-               
+
+                // clearInterval(pulseInterval);
+
+
             })
         },
     }
