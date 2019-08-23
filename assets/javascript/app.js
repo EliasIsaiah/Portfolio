@@ -54,12 +54,11 @@ $(document).ready(function () {
     }
 
 
-    helloHeader = {
+    const helloHeader = {
 
         words: [
             ["My", "name", "is", "Elias"],
             ["The", "cake", "is", "a lie"],
-            ["carpe", "diem"],
             ["I", "am", "the", "senate"],
             ["yippee", "ki", "yay", "cinnamon toast crunch"],
             ["Lions", "tigers", "bears", "oh my"],

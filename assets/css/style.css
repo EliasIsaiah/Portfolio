@@ -1,6 +1,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css");
 
 body {
+    background-color:white;
+}
+div.container {
     background-color: rgb(221, 210, 189);
     background: url("../images/background2.png") repeat;
     background-size: 5px 5px;
@@ -22,9 +25,15 @@ li {
 }
 
 div.container {
+    margin-top: 1rem;
     display: grid;
-    width: 100%;
+    width: 100vw;
+    height: 90vh;
     margin: auto;
+
+    -webkit-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
+    -moz-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
+    box-shadow: 2px 2px 2px 0px rgba(50,50,50, 0.5);
 }
 
 div.helloHeader {
@@ -53,7 +62,6 @@ div.repoHeader {
 }
 
 div.repoContainer {
-    display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(1, 1fr);
 }
@@ -64,7 +72,10 @@ p.repoName {
 }
 
 div.repoDiv {
-    margin: 5%;
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
 }
 
 footer.pageFooter {
@@ -85,7 +96,7 @@ footer p {
 
 @media screen and (min-width: 1900px) {
     div.container {
-        width: 60%;
+        width: 60vw;
     }
 
     div.helloHeader {
@@ -93,7 +104,10 @@ footer p {
     }
 
     div.repoContainer {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* grid-template-columns: repeat(4, 1fr); */
     }
 
     div.helloDiv {
@@ -103,12 +117,19 @@ footer p {
 
 @media screen and (min-width: 1366px) {
 
+    div.container {
+        width: 80vw;
+    }
+
     div.helloHeader {
         grid-template-columns: repeat(4, 1fr);
     }
 
     div.repoContainer {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* grid-template-columns: repeat(4, 1fr); */
     }
 
     div.helloDiv {
@@ -123,7 +144,11 @@ footer p {
     }
 
     div.repoContainer {
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        /* grid-template-columns: repeat(4, 1fr); */
     }
 
     div.helloDiv {
