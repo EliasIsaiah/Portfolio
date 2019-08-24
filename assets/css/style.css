@@ -141,13 +141,14 @@ footer p {
     }
     div.container {
         background-color: rgb(221, 210, 189);
-        background: url("../images/background2.png") repeat;
-        background-size: 2px 2px;
+        background: url("../images/background3.png") repeat;
+        background-size: 1000px 1000px;
         font-family: Helvetica, sans-serif;
     }
 
     div.container {
         width: 80vw;
+        height: 100%;
     }
 
     div.helloHeader {
@@ -178,6 +179,7 @@ footer p {
     }
     div.container {
         width: 60vw;
+        height: 100%;
     }
     
     div.helloHeader {

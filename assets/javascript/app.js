@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-    //global vars
-
     let interval = null;
 
     class repoObject {
@@ -25,20 +23,6 @@ $(document).ready(function () {
         }
     }
 
-    // let interval = {
-    //     intervals: [],
-
-    //     makeNewInterval: function(func, seconds, name){
-    //         let name = setInterval(func, seconds * 1000);
-    //         this.intervals.push(name);
-    //         return newInterval; 
-    //     },
-
-    //     clear(i) {
-    //         this.intervals.splice(i, 1);
-    //     }
-    // }
-
     const utilities = {
         wordInterval: null,
         mouseCounter: 0,
@@ -52,7 +36,6 @@ $(document).ready(function () {
             $this.children().text($this.attr("data-hello"));
         },
         checkArrayData: function () {
-            // clearInterval(this.wordInterval);
 
             if (this.mouseCounter >= helloHeader.words[this.arrayCounter].length) {
                 this.mouseCounter = 0;
