@@ -82,7 +82,7 @@ $(document).ready(function () {
 
                 pulseInterval = setInterval(() => {
                     helloDiv.addClass("animated pulse");
-                }, 2000);
+                }, 1000);
 
                 clearInterval(interval);
 
