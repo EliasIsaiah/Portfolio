@@ -61,7 +61,7 @@ $(document).ready(function () {
 
         words: [
             ["My", "name", "is", "Elias"],
-            ["My", "name", "is", "Elias"],
+            // ["My", "name", "is", "Elias"],
             ["The", "cake", "is", "a lie"],
             ["You must", "go to", "the dagobah", "system"],
             ["yippee", "ki", "yay", "cinnamon toast crunch"],
