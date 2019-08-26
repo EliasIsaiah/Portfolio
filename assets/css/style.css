@@ -1,8 +1,19 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css");
 
 body {
-    background-color: rgb(221, 210, 189);
-    background: url("../images/background2.png") repeat;
+    background-color: #fff;
+    background: url("../images/background3.png") repeat;
+    background-size: 1200px 1200px;
+
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin: 3vh;
+}
+
+h3 {
+    font-size: 1.5rem;
 }
 
 ol {
@@ -19,6 +30,15 @@ li {
     display: list-item;
 }
 
+div.welcome{
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+}
+
 div.container {
     background-size: 200px 200px;
     font-family: Helvetica, sans-serif;
@@ -27,7 +47,7 @@ div.container {
 div.container {
     margin-top: 1rem;
     display: grid;
-    grid-template-rows: .1fr .1fr 1fr; 
+    grid-template-rows: .1fr .1fr .1fr .5fr 1fr; 
     width: 100%;
     height: 100vh;
     margin: auto;
@@ -51,20 +71,16 @@ div.helloHeader {
 div.helloDiv {
     /* margin: 10%; */
     padding: 1rem;
-    background: white;
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 15px;
 
-    -webkit-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
-    -moz-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
-    box-shadow: 2px 2px 2px 0px rgba(50,50,50, 0.5);
+    -webkit-box-shadow: 4px 4px 5px 100px rgba(50,50,50, 0.5);
+    -moz-box-shadow: 4px 4px 5px 100px rgba(50,50,50, 0.5);
+    box-shadow: 4px 4px 4px 0px rgba(50,50,50, 0.5);
 
     /* display: none; */
     /* justify-self: center; */
     /* align-self: center; */
-    font-size: 1.5rem;
-}
-
-h3 {
     font-size: 1.5rem;
 }
 
@@ -79,16 +95,54 @@ div.repoContainer {
     grid-template-columns: repeat(1, 1fr);
 }
 
+div.repoContainer {
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: 10px;
+    grid-template-rows: minmax(150px, 1fr);
+    grid-auto-flow: column;
+    grid-auto-columns: calc(50% - var(--gutter) * 2);
+  
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: calc(.75 * var(--gutter));
+    margin-bottom: calc(-.25 * var(--gutter));
+}
+
+div.repoContainer:before,
+div.repoContainer:after {
+  content: '';
+  width: 10px;
+}
+
+div.repoContainer > .repoDiv {
+  scroll-snap-align: center;
+  padding: calc(var(--gutter) / 2 * 1.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.repoDiv {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 15px;
+}
+
 p.repoName {
     font-weight: 600;
     margin: .4rem 0;
 }
 
-div.repoDiv {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem;
-    border-radius: 15px;
+p.repoDescription {
+    margin: .4rem;
+    text-align: center;
+}
+
+div.repoDiv > a > p{
+    margin: .4rem;
 }
 
 footer.pageFooter {
@@ -109,13 +163,16 @@ footer p {
 
 @media screen and (min-width: 1024px) {
     body {
-        background:white;
+        /* background: #000000; */
     }
     div.container {
-        background-color: rgb(221, 210, 189);
-        /* background: url("../images/background2.png") repeat; */
-        background-size: 2px 2px;
+        background-color: rgb(255, 255, 255, .4);
+        /* background-color: rgb(221, 210, 189); */
+        /* background: url("../images/background3.png") repeat; */
+        background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
+        grid-template-rows: .1fr .1fr .1fr 1fr; 
+
     }
 
     div.helloHeader {
@@ -132,17 +189,26 @@ footer p {
 
     div.helloDiv {
         display: inherit;
+        font-size: 3rem;
     }
 }
 
 @media screen and (min-width: 1366px) {
     body {
-        background:white;
+        /* background:white; */
+        /* background: #000000; */
     }
+
+    h1 {
+        font-size: 4rem;
+        margin: 3vh;
+    }
+
     div.container {
-        background-color: rgb(221, 210, 189);
-        background: url("../images/background3.png") repeat;
-        background-size: 1000px 1000px;
+        /* background-color: rgb(221, 210, 189); */
+        background-color: rgb(255, 255, 255, .4);
+        /* background: url("../images/background3.png") repeat; */
+        background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
     }
 
@@ -169,17 +235,20 @@ footer p {
 
 @media screen and (min-width: 1900px) {
     body {
-        background:white;
+        /* background:white; */
+        /* background: #000000; */
+        overflow-x: hidden;
+
     }
     div.container {
-        background-color: rgb(221, 210, 189);
-        background: url("../images/background2.png") repeat;
-        background-size: 2px 2px;
+        background-color: rgb(255, 255, 255, .4);
+        /* background: url("../images/background3.png") repeat; */
+        background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
     }
     div.container {
         width: 60vw;
-        height: 100%;
+        height: 100vh;
     }
     
     div.helloHeader {
@@ -190,7 +259,7 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        /* grid-template-columns: repeat(4, 1fr); */
+        overflow-x: hidden;
     }
 
     div.helloDiv {
