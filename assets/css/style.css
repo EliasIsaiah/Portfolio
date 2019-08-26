@@ -171,8 +171,8 @@ footer p {
         /* background: url("../images/background3.png") repeat; */
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
-        grid-template-rows: .1fr .1fr .1fr 1fr; 
-
+        grid-template-rows: .1fr .1fr .1fr 1fr;
+        overflow-x: hidden;
     }
 
     div.helloHeader {
@@ -259,7 +259,6 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        overflow-x: hidden;
     }
 
     div.helloDiv {
