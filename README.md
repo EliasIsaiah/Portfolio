@@ -8,5 +8,6 @@ work is ongoing on this project.
 
 ## TODO:
 * add social media links to the page
+* transform helloHeader to navbar, change word reveal behavior to be mouseover text on browser, remove the text change behavior
 * add an "about me" page or section
 * troubleshoot compatitbility with different browsers
