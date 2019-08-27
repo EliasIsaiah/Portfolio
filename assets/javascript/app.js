@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
     let interval = null;
-
-    class repoObject {
+    
+    //repository object class made for ease of retrieving and shaping data from github's api
+    class repoObject { 
         constructor(object) {
             this.name = object.name;
             this.description = object.description;
@@ -17,9 +18,11 @@ $(document).ready(function () {
             let newRepoDiv = $("<div>").addClass("repoDiv");
             let name = $("<p>").text(this.name).addClass("repoName");
             let description = $("<p>").text(this.description).addClass("repoDescription");
-            let urlP = $("<p>").text(this.url);
-            let url = $("<a>").attr("href", this.url).append(urlP);
-            $("div.repoContainer").append(newRepoDiv.append(name, description, url));
+            let deployedP = $("<p>").text("Deployed");
+            let deployedURL = $("<a>").attr("href", `https://eliasisaiah.github.io/${this.name}`).append(deployedP);
+            let urlP = $("<p>").text("GitHub");
+            let gitHubURL = $("<a>").attr("href", this.url).append(urlP);
+            $("div.repoContainer").append(newRepoDiv.append(name, description, deployedURL, gitHubURL));
         }
     }
 

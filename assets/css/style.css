@@ -4,15 +4,24 @@ body {
     background-color: #fff;
     background: url("../images/background3.png") repeat;
     background-size: 1200px 1200px;
+    line-height: 1.3rem;
 }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 3vh;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.0rem;
+    margin: 1vh;
+    font-weight: 600;
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
 }
 
 ol {
@@ -29,14 +38,16 @@ li {
     display: list-item;
 }
 
-div.welcome{
-    margin: 0 auto;
-    display: inline-flex;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.5);
+ul {
+    display: table;
+    list-style: inside url(../images/smile.gif);
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
 }
+
 
 div.container {
     background-size: 200px 200px;
@@ -46,14 +57,23 @@ div.container {
 div.container {
     margin-top: 1rem;
     display: grid;
-    grid-template-rows: .1fr .1fr .1fr .5fr 1fr; 
+    grid-template-rows: .1fr .1fr .1fr .2fr 1fr; 
     width: 100%;
     height: 100vh;
     margin: auto;
-
+    
     -webkit-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
     -moz-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
     box-shadow: 2px 2px 2px 0px rgba(50,50,50, 0.5);
+}
+
+div.welcome{
+    margin: 0 auto;
+    display: inline-flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
 }
 
 div.helloHeader {
@@ -61,7 +81,7 @@ div.helloHeader {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 1vh;
+    margin: 1vh 0;
     /* display: grid; */
     /* grid-template-rows: 1fr; */
     /* grid-template-columns: repeat(1, 1fr); */
@@ -83,6 +103,10 @@ div.helloDiv {
     font-size: 1.5rem;
 }
 
+div.aboutMe {
+    margin: 0 .5rem;
+}
+
 div.repoHeader {
     justify-self: center;
     align-self: center;
@@ -102,7 +126,7 @@ div.repoContainer {
     grid-auto-flow: column;
     grid-auto-columns: calc(50% - var(--gutter) * 2);
   
-    overflow-x: hidden; 
+    overflow-x: scroll; 
     scroll-snap-type: x proximity;
     padding-bottom: calc(.75 * var(--gutter));
     margin-bottom: calc(-.25 * var(--gutter));
@@ -138,6 +162,7 @@ p.repoName {
 p.repoDescription {
     margin: .4rem;
     text-align: center;
+    width: 16rem;
 }
 
 div.repoDiv > a > p{
@@ -170,8 +195,7 @@ footer p {
         /* background: url("../images/background3.png") repeat; */
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
-        grid-template-rows: .1fr .1fr .1fr 1fr;
-        overflow-x: hidden;
+        grid-template-rows: .1fr .1fr 1fr .1fr 1fr;
     }
 
     div.helloHeader {
@@ -182,7 +206,7 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
+        overflow-x: hidden;
         /* grid-template-columns: repeat(4, 1fr); */
     }
 
@@ -224,6 +248,7 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        overflow-x: hidden;
         /* grid-template-columns: repeat(4, 1fr); */
     }
 
@@ -258,6 +283,7 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        overflow-x: hidden;
     }
 
     div.helloDiv {
