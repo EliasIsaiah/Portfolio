@@ -105,6 +105,8 @@ div.helloDiv {
 
 div.aboutMe {
     margin: 0 .5rem;
+    justify-self: center;
+    align-self: center;
 }
 
 div.repoHeader {
@@ -195,7 +197,7 @@ footer p {
         /* background: url("../images/background3.png") repeat; */
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
-        grid-template-rows: .1fr .1fr 1fr .1fr 1fr;
+        grid-template-rows: .1fr .1fr .1fr .1fr 1fr;
     }
 
     div.helloHeader {
@@ -223,7 +225,7 @@ footer p {
     }
 
     h1 {
-        font-size: 4rem;
+        font-size: 3.5rem;
         margin: 3vh;
     }
 
