@@ -102,7 +102,7 @@ div.repoContainer {
     grid-auto-flow: column;
     grid-auto-columns: calc(50% - var(--gutter) * 2);
   
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
     scroll-snap-type: x proximity;
     padding-bottom: calc(.75 * var(--gutter));
     margin-bottom: calc(-.25 * var(--gutter));
