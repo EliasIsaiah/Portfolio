@@ -215,9 +215,9 @@ footer p {
 }
 
 @media screen and (min-width: 600px) {
-    
-    body {
-        /* background: #000000; */
+
+    div.welcome {
+        margin: 0;
     }
 
     h1 {
@@ -229,7 +229,7 @@ footer p {
         /* background: url("../images/background3.png") repeat; */
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
-        grid-template-rows: 1fr;
+        /* grid-template-rows: 1fr; */
     }
 
     div.helloHeader {
