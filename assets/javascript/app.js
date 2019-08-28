@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
     let interval = null;
-    
+
     //repository object class made for ease of retrieving and shaping data from github's api
-    class repoObject { 
+    class repoObject {
         constructor(object) {
             this.name = object.name;
             this.description = object.description;

@@ -61,14 +61,14 @@ div.container {
 div.container {
     margin-top: 1rem;
     display: grid;
-    grid-template-rows: .1fr; 
+    grid-template-rows: .1fr;
     width: 100%;
     height: 100vh;
     margin: auto;
-    
-    -webkit-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
-    -moz-box-shadow: 2px 2px 5px 100px rgba(50,50,50, 0.5);
-    box-shadow: 2px 2px 2px 0px rgba(50,50,50, 0.5);
+
+    -webkit-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
+    box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5);
 }
 
 div.welcome {
@@ -98,9 +98,9 @@ div.helloDiv {
     /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 15px;
 
-    -webkit-box-shadow: 4px 4px 5px 100px rgba(50,50,50, 0.5);
-    -moz-box-shadow: 4px 4px 5px 100px rgba(50,50,50, 0.5);
-    box-shadow: 4px 4px 4px 0px rgba(50,50,50, 0.5);
+    -webkit-box-shadow: 4px 4px 5px 100px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow: 4px 4px 5px 100px rgba(50, 50, 50, 0.5);
+    box-shadow: 4px 4px 4px 0px rgba(50, 50, 50, 0.5);
 
     /* display: none; */
     /* justify-self: center; */
@@ -136,8 +136,8 @@ div.repoContainer {
     grid-template-rows: minmax(150px, 1fr);
     grid-auto-flow: column;
     grid-auto-columns: calc(50% - var(--gutter) * 2);
-  
-    overflow-x: scroll; 
+
+    overflow-x: scroll;
     scroll-snap-type: x proximity;
     padding-bottom: calc(.75 * var(--gutter));
     margin-bottom: calc(-.25 * var(--gutter));
@@ -145,17 +145,17 @@ div.repoContainer {
 
 div.repoContainer:before,
 div.repoContainer:after {
-  content: '';
-  width: 10px;
+    content: '';
+    width: 10px;
 }
 
-div.repoContainer > .repoDiv {
-  scroll-snap-align: center;
-  padding: calc(var(--gutter) / 2 * 1.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+div.repoContainer>.repoDiv {
+    scroll-snap-align: center;
+    padding: calc(var(--gutter) / 2 * 1.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 div.repoDiv {
@@ -176,7 +176,7 @@ p.repoDescription {
     width: 16rem;
 }
 
-div.repoDiv > a > p{
+div.repoDiv>a>p {
     margin: .4rem;
 }
 
@@ -197,7 +197,7 @@ footer p {
 }
 
 *.opaqueOnMobile {
-    background:rgba(255, 255, 255, 1);
+    background: rgba(255, 255, 255, 1);
 }
 
 @media screen and (max-width: 320px) {
@@ -223,6 +223,7 @@ footer p {
     h1 {
         font-size: 2.0rem;
     }
+
     div.container {
         background-color: rgba(255, 255, 255, .4);
         /* background-color: rgb(221, 210, 189); */
@@ -301,17 +302,19 @@ footer p {
         overflow-x: hidden;
 
     }
+
     div.container {
         background-color: rgb(255, 255, 255, .4);
         /* background: url("../images/background3.png") repeat; */
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
     }
+
     div.container {
         width: 60vw;
         height: 100vh;
     }
-    
+
     div.helloHeader {
         /* grid-template-columns: repeat(4, 1fr); */
     }
