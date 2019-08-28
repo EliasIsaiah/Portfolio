@@ -66,9 +66,9 @@ div.container {
     height: 100vh;
     margin: auto;
 
-    -webkit-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
+    /* -webkit-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
     -moz-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
-    box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5);
+    box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5); */
 }
 
 div.welcome {
@@ -200,7 +200,7 @@ footer p {
     background: rgba(255, 255, 255, 1);
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
     div.helloDiv p {
         font-size: 1rem
     }
@@ -211,6 +211,10 @@ footer p {
 
     div.welcome {
         margin: 0;
+    }
+
+    div.container {
+        height: 100%;
     }
 }
 
@@ -231,6 +235,10 @@ footer p {
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
         /* grid-template-rows: 1fr; */
+
+        -webkit-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
+        -moz-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
+        box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5);
     }
 
     div.helloHeader {
@@ -251,7 +259,7 @@ footer p {
     }
 
     *.opaqueOnMobile {
-        background-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.7);
     }
 }
 
