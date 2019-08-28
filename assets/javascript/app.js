@@ -15,7 +15,7 @@ $(document).ready(function () {
         }
 
         buildRepoDOM() {
-            let newRepoDiv = $("<div>").addClass("repoDiv");
+            let newRepoDiv = $("<div>").addClass("repoDiv opaqueOnMobile");
             let name = $("<p>").text(this.name).addClass("repoName");
             let description = $("<p>").text(this.description).addClass("repoDescription");
             let deployedP = $("<p>").text("Deployed");
@@ -82,7 +82,7 @@ $(document).ready(function () {
             this.words[utilities.arrayCounter].forEach(word => {
                 let helloDiv = $("<div>")
                     .attr("data-word", word)
-                    .addClass("helloDiv")
+                    .addClass("helloDiv opaqueOnMobile")
 
                 pulseInterval = setInterval(() => {
                     helloDiv.addClass("animated pulse");

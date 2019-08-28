@@ -4,7 +4,7 @@ body {
     background-color: #fff;
     background: url("../images/background3.png") repeat;
     background-size: 1200px 1200px;
-    background-attachment: scroll;
+    background-attachment: fixed;
     line-height: 1.3rem;
 }
 
@@ -15,9 +15,12 @@ h1 {
 }
 
 h2 {
-    font-size: 1.0rem;
-    margin: 1vh;
+    font-size: 1.3rem;
+    margin: 1vh 0;
+    padding: 1vh;
     font-weight: 600;
+    text-align: center;
+    background: #fff;
 }
 
 h3 {
@@ -58,7 +61,7 @@ div.container {
 div.container {
     margin-top: 1rem;
     display: grid;
-    grid-template-rows: .1fr .1fr .1fr .2fr 1fr; 
+    grid-template-rows: .1fr; 
     width: 100%;
     height: 100vh;
     margin: auto;
@@ -68,13 +71,14 @@ div.container {
     box-shadow: 2px 2px 2px 0px rgba(50,50,50, 0.5);
 }
 
-div.welcome{
-    margin: 0 auto;
+div.welcome {
+    margin: 2rem auto 0 auto;
     display: inline-flex;
     justify-content: center;
     align-self: center;
     width: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    /* background: rgba(255, 255, 255, 0.5); */
+
 }
 
 div.helloHeader {
@@ -91,7 +95,7 @@ div.helloHeader {
 div.helloDiv {
     /* margin: 10%; */
     padding: 1rem;
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     border-radius: 15px;
 
     -webkit-box-shadow: 4px 4px 5px 100px rgba(50,50,50, 0.5);
@@ -104,17 +108,21 @@ div.helloDiv {
     font-size: 1.5rem;
 }
 
+div.helloDiv p {
+    font-size: 100%;
+}
+
 div.aboutMe {
     margin: 0 .5rem;
     justify-self: center;
     align-self: center;
 }
 
-div.repoHeader {
+/* div.repoHeader {
     justify-self: center;
     align-self: center;
     margin: 10px 0;
-}
+} */
 
 div.repoContainer {
     grid-auto-rows: 1fr;
@@ -151,7 +159,7 @@ div.repoContainer > .repoDiv {
 }
 
 div.repoDiv {
-    background-color: rgba(255, 255, 255, 0.5);
+    /* background-color: rgba(255, 255, 255, 0.5); */
     padding: 1rem;
     margin: 1rem;
     border-radius: 15px;
@@ -188,17 +196,40 @@ footer p {
     font-size: .6rem;
 }
 
-@media screen and (min-width: 1024px) {
+*.opaqueOnMobile {
+    background:rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 320px) {
+    div.helloDiv p {
+        font-size: 1rem
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    div.welcome {
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    
     body {
         /* background: #000000; */
     }
+
+    h1 {
+        font-size: 2.0rem;
+    }
     div.container {
-        background-color: rgb(255, 255, 255, .4);
+        background-color: rgba(255, 255, 255, .4);
         /* background-color: rgb(221, 210, 189); */
         /* background: url("../images/background3.png") repeat; */
         background-size: 1200px 1200px;
         font-family: Helvetica, sans-serif;
-        grid-template-rows: .1fr .1fr .1fr .1fr 1fr;
+        grid-template-rows: 1fr;
     }
 
     div.helloHeader {
@@ -217,6 +248,10 @@ footer p {
         display: inherit;
         font-size: 3rem;
     }
+
+    *.opaqueOnMobile {
+        background-color: rgba(255, 255, 255, 0.5);
+    }
 }
 
 @media screen and (min-width: 1366px) {
@@ -226,7 +261,6 @@ footer p {
     }
 
     h1 {
-        font-size: 3.5rem;
         margin: 3vh;
     }
 
