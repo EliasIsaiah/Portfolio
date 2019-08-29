@@ -3,7 +3,7 @@ $(document).ready(function () {
     let interval = null;
 
     //repository object class made for ease of retrieving and shaping data from github's api
-    class repoObject {
+    class RepoObject {
         constructor(object) {
             this.name = object.name;
             this.description = object.description;
@@ -122,7 +122,7 @@ $(document).ready(function () {
         dataType: "jsonp",
     }).then(reposObject => {
         reposObject.data.forEach(repo => {
-            let repoObj = new repoObject(repo);
+            let repoObj = new RepoObject(repo);
             repoObj.buildRepoDOM();
             console.log(repoObj);
         })
