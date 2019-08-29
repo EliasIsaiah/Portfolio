@@ -16,7 +16,7 @@ h1 {
 
 h2 {
     font-size: 1.3rem;
-    margin: 1vh 0;
+    margin: 2rem 0;
     padding: 1vh;
     font-weight: 600;
     text-align: center;
@@ -195,6 +195,7 @@ div.repoDiv {
     padding: 1rem;
     margin: 1rem;
     border-radius: 15px;
+    /* border: 1px solid #000; */
 }
 
 p.repoName {
@@ -255,6 +256,7 @@ footer p {
 
     div.welcome {
         margin: 0;
+        margin-bottom: 1rem;
     }
 
     h1 {
@@ -274,10 +276,18 @@ footer p {
         box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5);
     }
 
-    div.container {
+    /* div.container {
         height: 100vh;
+    } */
+
+<<<<<<< HEAD
+=======
+    div.helloHeader {
+        /* grid-template-columns: repeat(4, 1fr); */
+        margin-bottom: 1rem;
     }
 
+>>>>>>> 163b5560c33cf0bcff6f068a2bf332c94f511adc
     div.repoContainer {
         display: flex;
         flex-wrap: wrap;
@@ -292,10 +302,14 @@ footer p {
     }
 
     *.opaqueOnMobile {
+<<<<<<< HEAD
         background-color: rgba(255, 255, 255, 0.7);
         color: #000;
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
+=======
+        background-color: rgba(255, 255, 255, 0.4);
+>>>>>>> 163b5560c33cf0bcff6f068a2bf332c94f511adc
     }
 }
 
