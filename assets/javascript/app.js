@@ -121,7 +121,7 @@ $(document).ready(function () {
         url: "https://api.github.com/users/eliasisaiah/repos",
         dataType: "jsonp",
     }).then(reposObject => {
-        reposObject.data.forEach(repo => {
+        reposObject.data.map(repo => {
             let repoObj = new RepoObject(repo);
             repoObj.buildRepoDOM();
             console.log(repoObj);
