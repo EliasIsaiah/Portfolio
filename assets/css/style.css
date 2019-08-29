@@ -4,7 +4,7 @@ body {
     background-color: #fff;
     background: url("../images/background3.png") repeat;
     background-size: 1200px 1200px;
-    background-attachment: fixed;
+    background-attachment: scroll;
     line-height: 1.3rem;
 }
 
@@ -41,6 +41,36 @@ ol {
 li {
     display: list-item;
 }
+
+a:link {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+div.socialMedia {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+div.socialMedia > div {
+    margin: 1rem;
+}
+
+div.socialMedia p {
+    display: none;
+}
+
+/* div.socialMedia div :hover div.socialMedia div i {
+        visibility: visible;
+} */
 
 ul {
     display: table;
@@ -83,6 +113,7 @@ div.welcome {
 
 div.helloHeader {
     display: flex;
+    display: none;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
@@ -116,6 +147,7 @@ div.aboutMe {
     margin: 0 .5rem;
     justify-self: center;
     align-self: center;
+    max-width: 50%;
 }
 
 /* div.repoHeader {
@@ -197,7 +229,8 @@ footer p {
 }
 
 *.opaqueOnMobile {
-    background: rgba(255, 255, 255, 1);
+    background: rgba(0, 0, 0, 1);
+    color: #fff;
 }
 
 @media screen and (max-width: 375px) {
@@ -245,10 +278,6 @@ footer p {
         height: 100vh;
     }
 
-    div.helloHeader {
-        /* grid-template-columns: repeat(4, 1fr); */
-    }
-
     div.repoContainer {
         display: flex;
         flex-wrap: wrap;
@@ -264,14 +293,13 @@ footer p {
 
     *.opaqueOnMobile {
         background-color: rgba(255, 255, 255, 0.7);
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
     }
 }
 
 @media screen and (min-width: 1366px) {
-    body {
-        /* background:white; */
-        /* background: #000000; */
-    }
 
     h1 {
         margin: 3vh;
@@ -324,10 +352,6 @@ footer p {
     div.container {
         width: 60vw;
         height: 100vh;
-    }
-
-    div.helloHeader {
-        /* grid-template-columns: repeat(4, 1fr); */
     }
 
     div.repoContainer {
