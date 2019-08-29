@@ -126,7 +126,8 @@ $(document).ready(function () {
             repoObj.buildRepoDOM();
             console.log(repoObj);
         })
-    })
+    }).catch(error => $("div.repoContainer").text("Failed to load GitHub API")
+    )
 
     helloHeader.buildHelloHeaderDOM();
 })
