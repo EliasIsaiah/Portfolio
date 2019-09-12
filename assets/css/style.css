@@ -278,9 +278,9 @@ footer p {
         font-family: Helvetica, sans-serif;
         /* grid-template-rows: 1fr; */
 
-        -webkit-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
+        /* -webkit-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
         -moz-box-shadow: 2px 2px 5px 100px rgba(50, 50, 50, 0.5);
-        box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5);
+        box-shadow: 2px 2px 2px 0px rgba(50, 50, 50, 0.5); */
     }
 
     /* div.container {
