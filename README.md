@@ -1,6 +1,6 @@
 # Portfolio
 
-I took a strange approach to this assignment. The website itself is like one of the portfolio artifacts. I made some sort of interactive game-like word reveal activity where I probably should have put a navigation header.
+I took a strange approach to this page. The website itself is like one of the portfolio artifacts. I made some sort of interactive game-like word reveal activity where I probably should have put a navigation header.
 
 On mobile the github repository objects collapse into a carousel-type element that scales better on mobile devices. 
 
