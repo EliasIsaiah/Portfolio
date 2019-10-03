@@ -18,11 +18,11 @@ $(document).ready(function () {
             let newRepoDiv = $("<div>").addClass("repoDiv opaqueOnMobile");
             let name = $("<p>").text(this.name).addClass("repoName");
             let description = $("<p>").text(this.description).addClass("repoDescription");
-            let deployedP = $("<p>").text("Deployed");
-            let deployedURL = $("<a>").attr("href", `https://eliasisaiah.github.io/${this.name}`).append(deployedP);
+            // let deployedP = $("<p>").text("Deployed");
+            // let deployedURL = $("<a>").attr("href", `https://eliasisaiah.github.io/${this.name}`).append(deployedP);
             let urlP = $("<p>").text("GitHub");
             let gitHubURL = $("<a>").attr("href", this.url).append(urlP);
-            $("div.repoContainer").append(newRepoDiv.append(name, description, deployedURL, gitHubURL));
+            $("div.repoContainer").append(newRepoDiv.append(name, description, gitHubURL));
         }
     }
 
