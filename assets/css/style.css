@@ -271,6 +271,10 @@ div.valhallaImg {
     background: top / cover no-repeat url("../images/valhalla.PNG");  
 }
 
+div.peachImg {
+    background: top / cover no-repeat url("../images/peach.PNG");  
+}
+
 @media screen and (max-width: 375px) {
     div.helloDiv p {
         font-size: 1rem
@@ -391,6 +395,6 @@ div.valhallaImg {
     }
     
     div.featuredProject {
-        max-width: 80%:
+        max-width: 50%;
     }
 }
