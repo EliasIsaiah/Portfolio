@@ -124,7 +124,6 @@ $(document).ready(function () {
         reposObject.data.map(repo => {
             let repoObj = new RepoObject(repo);
             repoObj.buildRepoDOM();
-            console.log(repoObj);
         })
     }).catch(error => $("div.repoContainer").text("Failed to load GitHub API")
     )
