@@ -263,12 +263,14 @@ div.featuredProjectsContainer {
 div.featuredProject {
     margin: 0 .5rem .6rem .5rem;
     padding: .6rem;
-    background-color: rgba(221, 221, 221, 0.5);
     border-radius: 15px;
+
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
 }
 
 div.repoImg {
-    grid-row: 2;
+    min-height: 300px;
     margin: 1rem;
     border-radius: 15px;
 }
@@ -283,6 +285,10 @@ div.valhallaImg {
 
 div.peachImg {
     background: top / cover no-repeat url("../images/peach.PNG");
+}
+
+div.content {
+    padding: .5rem;
 }
 
 @media screen and (max-width: 375px) {
@@ -349,8 +355,8 @@ div.peachImg {
     }
 
     *.opaqueOnMobile {
-        background-color: rgba(255, 255, 255, 0.7);
-        color: #000;
+        /* background-color: rgba(255, 255, 255, 0.7);
+        color: #000; */
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
     }
@@ -407,9 +413,9 @@ div.peachImg {
     }
 
     div.featuredProject {
-        max-width: 50%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
     }
-
     div.featuredProjectsContainer {
         flex-direction: row;
     }
