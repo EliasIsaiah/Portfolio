@@ -150,16 +150,10 @@ div.aboutMe {
     justify-self: center;
     align-self: start;
     max-width: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
     border-radius: 15px;
 }
-
-
-/* div.repoHeader {
-    justify-self: center;
-    align-self: center;
-    margin: 10px 0;
-} */
 
 div.repoContainer {
     grid-auto-rows: 1fr;
@@ -244,6 +238,11 @@ footer p {
     padding-left: 0;
 }
 
+/* div.featuredProjectsContainer {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
 div.featuredProject {
     display: grid;
     grid-template-columns: 1fr;
@@ -255,10 +254,24 @@ div.featuredProject {
     max-width: 100%;
     background-color: rgba(221, 221, 221, 0.5);
     border-radius: 15px;
+} */
+div.featuredProjectsContainer {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+div.featuredProject {
+    margin: 0 .5rem .6rem .5rem;
+    padding: .6rem;
+    border-radius: 15px;
+
+    background-color: rgba(0, 0, 0, 1);
+    color: #fff;
 }
 
 div.repoImg {
-    grid-row: 2;
+    min-height: 300px;
     margin: 1rem;
     border-radius: 15px;
 }
@@ -273,6 +286,10 @@ div.valhallaImg {
 
 div.peachImg {
     background: top / cover no-repeat url("../images/peach.PNG");
+}
+
+div.content {
+    padding: .5rem;
 }
 
 @media screen and (max-width: 375px) {
@@ -339,8 +356,8 @@ div.peachImg {
     }
 
     *.opaqueOnMobile {
-        background-color: rgba(255, 255, 255, 0.7);
-        color: #000;
+        /* background-color: rgba(255, 255, 255, 0.7);
+        color: #000; */
         background-color: rgba(0, 0, 0, 0.6);
         color: #fff;
     }
@@ -356,47 +373,57 @@ div.peachImg {
     div.repoImg {
         min-height: 300px;
     }
+
+    div.featuredProject {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+    }
+
+    div.aboutMe {
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff
+    }
 }
 
-    @media screen and (min-width: 1366px) {
+@media screen and (min-width: 1366px) {
 
-        h1 {
-            margin: 3vh;
-        }
-
-        div.container {
-            /* background-color: rgb(221, 210, 189); */
-            background-color: rgb(255, 255, 255, .4);
-            /* background: url("../images/background3.png") repeat; */
-            background-size: 1200px 1200px;
-            font-family: Helvetica, sans-serif;
-        }
-
-        div.container {
-            width: 80vw;
-        }
-
-        div.helloHeader {
-            /* grid-template-columns: repeat(4, 1fr); */
-        }
-
-        div.aboutMe {
-            max-width: 50%;
-        }
-
-        div.repoContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            overflow-x: hidden;
-            /* grid-template-columns: repeat(4, 1fr); */
-        }
-
-        div.helloDiv {
-            display: inherit;
-        }
-
-        div.featuredProject {
-            max-width: 50%;
-        }
+    h1 {
+        margin: 3vh;
     }
+
+    div.container {
+        /* background-color: rgb(221, 210, 189); */
+        background-color: rgb(255, 255, 255, .4);
+        /* background: url("../images/background3.png") repeat; */
+        background-size: 1200px 1200px;
+        font-family: Helvetica, sans-serif;
+    }
+
+    div.container {
+        width: 80vw;
+    }
+
+    div.helloHeader {
+        /* grid-template-columns: repeat(4, 1fr); */
+    }
+
+    div.aboutMe {
+        max-width: 50%;
+    }
+
+    div.repoContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        overflow-x: hidden;
+        /* grid-template-columns: repeat(4, 1fr); */
+    }
+
+    div.helloDiv {
+        display: inherit;
+    }
+
+    div.featuredProjectsContainer {
+        flex-direction: row;
+    }
+}
