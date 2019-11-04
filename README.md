@@ -1,12 +1,12 @@
 # Portfolio
 
-This is my Portfolio website, just a medium for my various projects that I work on. It utilizes a basic GitHub API call to display all of my public repos at the bottom, and showcases a few projects I'm particularly proud of at the time.
+This is my Portfolio website, just a medium for my various projects that I work on. It utilizes a basic GitHub API call to display all of my public repos at the bottom, and showcases a few projects I'm particularly proud of at this time.
 
 ### What makes it unique
 
 For better or for worse, I decided to make this website without the use of css framewoks like materialize or bootstrap.
 
-All styling done on the site is done with vanilla CSS, utilizing relative newcomers to the technology like Grid CSS and Flexbox to create a responsive layout is lightweight and modern.
+All styling done on the site is done with vanilla CSS, utilizing relative newcomers to the technology like Grid CSS and Flexbox to create a responsive layout that is lightweight and modern.
 
 ### A Couple Pros and Cons re: using/not using CSS Frameworks
 
