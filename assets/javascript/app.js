@@ -116,17 +116,17 @@ $(document).ready(function () {
         },
     }
 
-    $.ajax({
-        method: "GET",
-        url: "https://api.github.com/users/eliasisaiah/repos",
-        dataType: "jsonp",
-    }).then(reposObject => {
-        reposObject.data.map(repo => {
-            let repoObj = new RepoObject(repo);
-            repoObj.buildRepoDOM();
-        })
-    }).catch(error => $("div.repoContainer").text("Failed to load GitHub API")
-    )
+    // $.ajax({
+    //     method: "GET",
+    //     url: "https://api.github.com/users/eliasisaiah/repos",
+    //     dataType: "jsonp",
+    // }).then(reposObject => {
+    //     reposObject.data.map(repo => {
+    //         let repoObj = new RepoObject(repo);
+    //         repoObj.buildRepoDOM();
+    //     })
+    // }).catch(error => $("div.repoContainer").text("Failed to load GitHub API")
+    // )
 
-    helloHeader.buildHelloHeaderDOM();
+    // helloHeader.buildHelloHeaderDOM();
 })
