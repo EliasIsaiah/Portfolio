@@ -285,6 +285,9 @@ div.burgerImg {
     background: top / cover no-repeat url("../images/burger.PNG");
 }
 
+div.foodstaImg {
+    background: top / cover no-repeat url("../images/foodsta.PNG");
+}
 div.valhallaImg {
     background: top / cover no-repeat url("../images/valhalla.PNG");
 }
