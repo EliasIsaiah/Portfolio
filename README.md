@@ -1,5 +1,7 @@
 # Portfolio
 
+# I'm a silly goofball :P
+
 This is my Portfolio website, just a medium for my various projects that I work on. It utilizes a basic GitHub API call to display all of my public repos at the bottom, and showcases a few projects I'm particularly proud of at this time.
 
 ### What makes it unique
